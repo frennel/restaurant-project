@@ -1,0 +1,117 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="Register.css"/>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />�
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<title>Pasto Felice Resto</title>
+	
+<SCRIPT TYPE="text/javaScript">
+
+function showAndClearField(frm){
+   
+	document.getElementById("form1").innerHTML = "<font face='Century Gothic'"+"<br/><br/>"+"<h2><i>Welcome "+frm.firstName.value+" !</i></h2><br/><br/></h4>"+"<b>Full Name:</b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + frm.firstName.value + " "+frm.middleName.value+" " + frm.lastName.value 
+	  +"<br/><br/>"+"<b>Gender: </b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+frm.sex.value+"<br/><br/>"
+	  +"<b>Contact No. : </b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+frm.number.value+"<br/><br/>"
+	  +"<b>Home Address: </b>&nbsp&nbsp&nbsp&nbsp"+frm.homeAddress.value+"<br/><br/>"
+	  +"<b>Email Address: </b>&nbsp&nbsp&nbsp&nbsp&nbsp"+frm.emailAddress.value+"</h4></font>";
+
+}
+</SCRIPT>
+
+</head>
+
+<body BACKGROUND="last_09.png" BGCOLOR="#000000" BGPROPERTIES="FIXED">>
+	
+	<div id="container">
+	<div id="logo"> 
+	<img src="LOGO1_02.png" width= 880px height=250px> 
+	</div>
+	
+	<div id="header">
+	<p class="one">
+		<b>CALL US NOW!</b><br>
+	</p>
+	<p class="two">
+		@pastofelice<br>09-212-868-461
+	</p>
+	</div>
+
+	<div id="about"><i><b>Registration Form</b></i></div>
+	
+	<form id="form1">
+<form action="">
+
+<font face="Century Gothic"><br>
+<fieldset class="fs"><legend><h4>Personal Information</h4></legend>
+
+<br>First Name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name="firstName" id="ff" size=25><br>
+<br>Middle Name:&nbsp&nbsp <input type="text" name="middleName" id="mm" size=25><br>
+<br>Last Name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name="lastName" id="ll" size=25><br>
+<br>Gender&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+<input type="radio" name="sex" value="Male" id="gg" checked>Male
+<input type="radio" name="sex" value="Female" id="gg">Female
+<br>
+<br>
+<br>
+</fieldset>
+<br><fieldset class="fs"><legend><h4>Contact Information</h4></legend><br>
+Contact Number: +63 <input type="text" name="number" id="num" maxlength=11  size=19 onKeyUp="this.value=this.value.replace(/[^0-9. -]/g,'')">
+<br>
+<br>Home Address:&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name="homeAddress" id="ha" size=25>
+<br>
+<br>Email Address:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text" name="emailAddress" id="ea" size=25>
+<br><br>
+Picture: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="file" accept="image/*" onchange="loadFile(event)"><br><br>
+Preview:
+<img id="output" style="margin-left:90px;width:100px;height:100px; position: absolute; border:1px solid gray"/>
+<script>
+  var loadFile = function(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+      var output = document.getElementById('output');
+      output.src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  };
+</script>
+<br><br><br><br><br>
+
+
+</fieldset>
+
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+
+<br>
+
+&nbsp&nbsp <INPUT TYPE="Button" Value="Submit" onClick="showAndClearField(this.form)">
+<br><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+
+
+</font>		
+</form>
+</form>
+	
+	<div id = "box">
+		<ul>
+		<li><a href="index.html">HOME</a>
+		<li><a href="Services">SERVICES</a>
+		<li><a href="Dishes.html">DISHES</a>
+		<li><a href="About.html">ABOUT US</a>
+		<li><a href="Gallery.html">GALLERY</a>
+		</ul>
+	</div>
+	
+	<div id="footer">
+	<p> Pasto Felice Resto &copy; Copyright 2020</p>
+	</div>
+
+	<div id="bg"></div>
+</div>
+
+</body>
+
+</html>
